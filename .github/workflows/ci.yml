@@ -24,5 +24,6 @@ jobs:
       - run: flutter pub get
       - run: flutter test --coverage
       - run: curl -s https://codecov.io/bash
-          shell: bash
+          with:
+            shell: bash
       - run: flutter build apk --debug --split-per-abi

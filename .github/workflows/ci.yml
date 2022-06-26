@@ -23,5 +23,7 @@ jobs:
           flutter-version: "3.0.2"
       - run: flutter pub get
       - run: flutter test --coverage
-      - run: curl -s https://codecov.io/bash
+      - name: Upload coverage to codecov
+        run: curl -s https://codecov.io/bash
+        shell: bash
       - run: flutter build apk --debug --split-per-abi

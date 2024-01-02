@@ -8,6 +8,7 @@ class Preco implements ValueObject<String, Money> {
   final Either<String, Money> value;
 
   factory Preco(PositiveMoney value) {
+    print("debug: value");
     if (value.isValid) {
       return Preco._(left('Preco invalido'));
     }

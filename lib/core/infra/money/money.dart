@@ -6,6 +6,7 @@ class Money implements ValueObject<String, double> {
   final Either<String, double> value;
 
   factory Money(double value) {
+    print("Money");
     return Money._(right(value));
   }
 
